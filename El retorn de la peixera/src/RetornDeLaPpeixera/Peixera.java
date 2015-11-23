@@ -7,9 +7,9 @@ public class Peixera {
 
 	private static final int N_Peixos = 10;
 	private static final int N_Taurons = 4;
-	List<Peix> peixos = new ArrayList<Peix>();
-	List<Peix> morts = new ArrayList<>();
-	List<Peix> bebe = new ArrayList<>();
+	List<Animal> peixos = new ArrayList<Animal>();
+	List<Animal> morts = new ArrayList<>();
+	List<Animal> bebe = new ArrayList<>();
 	List<Tauro> taurons = new ArrayList<>();
 	List<Tauro> tauronsMorts = new ArrayList<>();
 	List<Tauro> tauronsBebe = new ArrayList<>();
@@ -23,7 +23,7 @@ public class Peixera {
 		// crear peixos
 		for (int i = 0; i < N_Peixos; i++) {
 			boolean sexe = (nPeixos % 2 == 0);
-			Peix p = new Peix(1000, 600, sexe);
+			Animal p = new Peix(1000, 600, sexe);
 			peixos.add(p);
 			nPeixos++;
 		}
@@ -36,7 +36,7 @@ public class Peixera {
 	}
 
 	public void mou() {
-		for (Peix p : peixos) {
+		for (Animal p : peixos) {
 			p.mou();
 		}
 		for (Tauro t : taurons) {
@@ -47,8 +47,8 @@ public class Peixera {
 		morts.clear();
 		tauronsBebe.clear();
 		tauronsMorts.clear();
-		for (Peix p : peixos) {
-			for (Peix q : peixos) {
+		for (Animal p : peixos) {
+			for (Animal q : peixos) {
 				if (!p.equals(q)) {
 					switch (p.xoca(q)) {
 					case 0:
@@ -62,7 +62,7 @@ public class Peixera {
 					case 2:
 						// cria
 						boolean sexe = (nPeixos % 2 == 0);
-						Peix b = new Peix(1000, 600, sexe);
+						Animal b = new Peix(1000, 600, sexe);
 						bebe.add(b);
 						nPeixos++;
 						p.setEsteril(true);
@@ -103,7 +103,7 @@ public class Peixera {
 		}
 
 		for (Tauro t : taurons) {
-			for (Peix p : peixos) {
+			for (Animal p : peixos) {
 				if (t.xoca(p) == 3) {
 					morts.add(p);
 				}
@@ -111,11 +111,11 @@ public class Peixera {
 		}
 
 		// eliminar els peixos morts de la llista de peixos
-		for (Peix m : morts) {
+		for (Animal m : morts) {
 			peixos.remove(m);
 		}
 		// afageix el bebe a la llista peixos
-		for (Peix b : bebe) {
+		for (Animal b : bebe) {
 			peixos.add(b);
 		}
 		// eliminar els taurons morts de la llista de taurons
@@ -129,15 +129,15 @@ public class Peixera {
 
 	}
 
-	public List<Peix> getPeixos() {
+	public List<Animal> getPeixos() {
 		return peixos;
 	}
 
-	public List<Peix> getMorts() {
+	public List<Animal> getMorts() {
 		return morts;
 	}
 
-	public List<Peix> getBebes() {
+	public List<Animal> getBebes() {
 		return bebe;
 	}
 

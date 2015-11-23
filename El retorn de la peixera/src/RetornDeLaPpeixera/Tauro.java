@@ -2,13 +2,11 @@ package RetornDeLaPpeixera;
 
 import acm.graphics.GImage;
 
-public class Tauro extends Peix{
+public class Tauro extends Animal{
 
 	public Tauro(int midaFinestaX, int midaFinestaY, boolean mascle) {
 		super(midaFinestaX, midaFinestaY, mascle);
-		
-		
-		
+				
 	}
 	
 	@Override
@@ -45,6 +43,19 @@ public class Tauro extends Peix{
 		}
 		imatge=new GImage(img, posicioX,posicioY);
 	}
+	
+	/**
+	 * 3 tauro mata peix
+	 */
+	@Override
+	public int xoca(Animal p){
+		int resultat=0;
+		if(this.getPosicio().intersects(p.getPosicio())){
+			resultat=3;
+		}
+		return resultat;
+	}
+		
 	public int xoca(Tauro t){
 		int resultat=0;
 		if(this.getPosicio().intersects(t.getPosicio())){
@@ -58,17 +69,5 @@ public class Tauro extends Peix{
 		}
 		return resultat;
 	}
-	/**
-	 * 3 tauro mata peix
-	 */
-	@Override
-	public int xoca(Peix p){
-		int resultat=0;
-		if(this.getPosicio().intersects(p.getPosicio())){
-			resultat=3;
-		}
-		return resultat;
-	}
 
-	//si un peix xoca amb un tauro el peix viu pero si es el revis el peix mort
 }

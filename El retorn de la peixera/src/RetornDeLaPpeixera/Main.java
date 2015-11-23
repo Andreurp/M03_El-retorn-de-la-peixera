@@ -7,6 +7,8 @@ import acm.program.GraphicsProgram;
 
 public class Main extends GraphicsProgram{
 
+	private static final int MIDA_Altura_Finestre = 600;
+	private static final int MIDA_Amplada_Finestre = 1000;
 	/**
 	 * 
 	 */
@@ -14,7 +16,7 @@ public class Main extends GraphicsProgram{
 
 	public void init() {
 		//mida de la pantalla i color fons
-	    setSize(1000, 600);
+	    setSize(MIDA_Amplada_Finestre, MIDA_Altura_Finestre);
 	    setBackground(Color.cyan);
 	}
 	
@@ -22,10 +24,10 @@ public class Main extends GraphicsProgram{
 		
 		//crea la paixera
 		Peixera aquari=new Peixera();
-		List<Peix>peixos=aquari.getPeixos();
+		List<Animal>peixos=aquari.getPeixos();
 		List<Tauro>taurons=aquari.getTaurons();
 		//dibuixar peixos
-		for(Peix p: peixos){
+		for(Animal p: peixos){
 			add(p.getImatge());
 		}
 		for(Tauro t: taurons){
@@ -35,11 +37,11 @@ public class Main extends GraphicsProgram{
 		while(!aquari.gameOver()){
 			aquari.mou();
 			//eliminar de la pantalla els morts
-			for(Peix p:	aquari.getMorts()){
+			for(Animal p:	aquari.getMorts()){
 				remove(p.getImatge());
 			}
 			//afagir a la pantalla els bebes
-			for(Peix p:	aquari.getBebes()){
+			for(Animal p:	aquari.getBebes()){
 				add(p.getImatge());
 			}
 			for(Tauro t: aquari.getTauronsMorts()){
