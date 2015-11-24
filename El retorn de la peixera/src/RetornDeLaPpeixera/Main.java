@@ -24,15 +24,12 @@ public class Main extends GraphicsProgram{
 		
 		//crea la paixera
 		Peixera aquari=new Peixera();
-		List<Animal>peixos=aquari.getPeixos();
-		List<Tauro>taurons=aquari.getTaurons();
+		List<Animal>animals=aquari.getAnimals();
 		//dibuixar peixos
-		for(Animal p: peixos){
+		for(Animal p: animals){
 			add(p.getImatge());
 		}
-		for(Tauro t: taurons){
-			add(t.getImatge());
-		}
+		
 		
 		while(!aquari.gameOver()){
 			aquari.mou();
@@ -43,12 +40,6 @@ public class Main extends GraphicsProgram{
 			//afagir a la pantalla els bebes
 			for(Animal p:	aquari.getBebes()){
 				add(p.getImatge());
-			}
-			for(Tauro t: aquari.getTauronsMorts()){
-				remove(t.getImatge());
-			}
-			for(Tauro t: aquari.getTauronsBebes()){
-				add(t.getImatge());
 			}
 			pause(100);
 		}

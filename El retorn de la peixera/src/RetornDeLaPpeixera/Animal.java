@@ -19,7 +19,7 @@ public abstract class Animal {
 	protected boolean esteril;
 	protected int contedorEsteril;
 	
-	private Random rand = new Random();
+	protected Random rand = new Random();
 	
 	public Animal (int midaFinestaX, int midaFinestaY, boolean mascle) {
 		this.mascle=mascle;
@@ -44,34 +44,8 @@ public abstract class Animal {
 	protected abstract void generaImatge();
 	
 	//Mou peix
-	public void mou(){
-		if(horizontal==true){
-			imatge.move(direccio*velocitat,0);
-			
-		}else{
-			imatge.move(0, direccio*velocitat);
-		}
-		
-		//Quan desaparegi per un custat torna per l'oposat
-		if(horizontal){
-			if(imatge.getLocation().getX()>midaFinestraX){
-				imatge.setLocation(0-imatge.getBounds().getWidth(), posicioY);
-			}else if(imatge.getLocation().getX()<0-imatge.getBounds().getWidth()){
-				imatge.setLocation(midaFinestraX, posicioY);
-			}
-		}else{
-			if(imatge.getLocation().getY()>midaFinestraY){
-				imatge.setLocation(posicioX,0-imatge.getBounds().getHeight());
-			}else if(imatge.getLocation().getY()<0-imatge.getBounds().getHeight()){
-				imatge.setLocation(posicioX, midaFinestraY);
-			}
-		}
-		
-		contedorEsteril=contedorEsteril-velocitat;
-		if(contedorEsteril<=0){
-			esteril=false;
-		}
-	}
+	public abstract void mou();
+	
 	public GImage getImatge() {
 		return imatge;
 	}
@@ -89,8 +63,9 @@ public abstract class Animal {
 	 * 
 	 * @param p
 	 * @return 0 no fer res
-	 * 1 mata els dos peixos
-	 * 2 cria peix
+	 * 1 mata els dos animals
+	 * 2 cria animal
+	 * 3 mata a l'altre animal
 	 */
 	public abstract int xoca(Animal p);
 	
