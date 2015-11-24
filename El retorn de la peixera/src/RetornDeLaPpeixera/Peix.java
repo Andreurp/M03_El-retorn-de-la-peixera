@@ -16,29 +16,29 @@ public class Peix extends Animal {
 		if (mascle == true) {
 			if (horizontal == true) {
 				if (direccio > 0) {
-					img = "Peixos/PeixMascleDreta.png";
+					img = "Peixos/MascleDreta.png";
 				} else {
-					img = "Peixos/PeixMascleEsquerra.png";
+					img = "Peixos/MascleEsquerra.png";
 				}
 			} else {
 				if (direccio > 0) {
-					img = "Peixos/PeixMascleAbaix.png";
+					img = "Peixos/MascleAbaix.png";
 				} else {
-					img = "Peixos/PeixMascleAmon.png";
+					img = "Peixos/MascleAmon.png";
 				}
 			}
 		} else {
 			if (horizontal == true) {
 				if (direccio > 0) {
-					img = "Peixos/PeixFamellaDreta.png";
+					img = "Peixos/FamellaDreta.png";
 				} else {
-					img = "Peixos/PeixFamellaEsquerra.png";
+					img = "Peixos/FamellaEsquerra.png";
 				}
 			} else {
 				if (direccio > 0) {
-					img = "Peixos/PeixFamellaAbaix.png";
+					img = "Peixos/FamellaAbaix.png";
 				} else {
-					img = "Peixos/PeixFamellaAmon.png";
+					img = "Peixos/FamellaAmon.png";
 				}
 			}
 		}

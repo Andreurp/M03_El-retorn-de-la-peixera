@@ -1,14 +1,14 @@
 package RetornDeLaPpeixera;
 
-import java.awt.Color;
 import java.util.List;
 
+import acm.graphics.GImage;
 import acm.program.GraphicsProgram;
 
 public class Main extends GraphicsProgram{
 
-	private static final int MIDA_Altura_Finestre = 600;
-	private static final int MIDA_Amplada_Finestre = 1000;
+	private static final int MIDA_Altura_Finestre = 650;
+	private static final int MIDA_Amplada_Finestre = 1350;
 	/**
 	 * 
 	 */
@@ -17,7 +17,9 @@ public class Main extends GraphicsProgram{
 	public void init() {
 		//mida de la pantalla i color fons
 	    setSize(MIDA_Amplada_Finestre, MIDA_Altura_Finestre);
-	    setBackground(Color.cyan);
+	    GImage fons = new GImage("fons.jpg");
+		fons.setSize(MIDA_Amplada_Finestre, MIDA_Altura_Finestre);
+		add(fons);
 	}
 	
 	public void run(){

@@ -14,29 +14,29 @@ public class Dofi extends Animal {
 		if (mascle == true) {
 			if (horizontal == true) {
 				if (direccio > 0) {
-					img = "Dofins/dofi.png";
+					img = "Dofins/MascleDreta.png";
 				} else {
-					img = "Dofins/dofi.png";
+					img = "Dofins/MascleEsquerra.png";
 				}
 			} else {
 				if (direccio > 0) {
-					img = "Dofins/dofi.png";
+					img = "Dofins/MascleDreta.png";
 				} else {
-					img = "Dofins/dofi.png";
+					img = "Dofins/MascleEsquerra.png";
 				}
 			}
 		} else {
 			if (horizontal == true) {
 				if (direccio > 0) {
-					img = "Dofins/dofiF.png";
+					img = "Dofins/FamellaDreta.png";
 				} else {
-					img = "Dofins/dofiF.png";
+					img = "Dofins/FamellaEsquerra.png";
 				}
 			} else {
 				if (direccio > 0) {
-					img = "Dofins/dofiF.png";
+					img = "Dofins/FamellaDreta.png";
 				} else {
-					img = "Dofins/dofiF.png";
+					img = "Dofins/FamellaEsquerra.png";
 				}
 			}
 		}

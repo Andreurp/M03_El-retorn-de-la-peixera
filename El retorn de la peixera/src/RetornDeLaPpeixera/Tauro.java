@@ -15,29 +15,29 @@ public class Tauro extends Animal {
 		if (mascle == true) {
 			if (horizontal == true) {
 				if (direccio > 0) {
-					img = "Taurons/TauroMascleDreta.png";
+					img = "Taurons/MascleDreta.png";
 				} else {
-					img = "Taurons/TauroMascleEsquerra.png";
+					img = "Taurons/MascleEsquerra.png";
 				}
 			} else {
 				if (direccio > 0) {
-					img = "Taurons/TauroMascleAbaix.png";
+					img = "Taurons/MascleAbaix.png";
 				} else {
-					img = "Taurons/TauroMascleAmaon.png";
+					img = "Taurons/MascleAmaon.png";
 				}
 			}
 		} else {
 			if (horizontal == true) {
 				if (direccio > 0) {
-					img = "Taurons/TauroFamellaDreta.png";
+					img = "Taurons/FamellaDreta.png";
 				} else {
-					img = "Taurons/TauroFamellaEsquerra.png";
+					img = "Taurons/FamellaEsquerra.png";
 				}
 			} else {
 				if (direccio > 0) {
-					img = "Taurons/TauroFamellaAbaix.png";
+					img = "Taurons/FamellaAbaix.png";
 				} else {
-					img = "Taurons/TauroFamellaAmon.png";
+					img = "Taurons/FamellaAmon.png";
 				}
 			}
 		}

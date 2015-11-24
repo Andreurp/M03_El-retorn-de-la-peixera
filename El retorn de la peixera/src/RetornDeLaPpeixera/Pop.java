@@ -37,8 +37,7 @@ public class Pop extends Animal {
 		} else {
 			imatge.move(0, direccio * velocitat);
 		}
-
-		// Quan desaparegi per un custat torna per l'oposat
+		
 		if (horizontal) {
 			// baix horitzontal
 			if (posicioY > 0) {

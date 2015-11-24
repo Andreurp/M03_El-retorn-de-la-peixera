@@ -79,10 +79,10 @@ public class Tortuga extends Animal {
 		if (p.getClass().equals(Tortuga.class)) {
 			if (this.getPosicio().intersects(p.getPosicio())) {
 				if (this.getMascle() == p.getMascle()) {
-					// resultat = 1;
+					resultat = 1;
 				} else {
 					if (this.getEsteril() == false && p.getEsteril() == false) {
-						// resultat = 2;
+						resultat = 2;
 					}
 				}
 			}

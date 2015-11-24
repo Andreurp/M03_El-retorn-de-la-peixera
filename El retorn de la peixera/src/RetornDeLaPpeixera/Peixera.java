@@ -29,34 +29,34 @@ public class Peixera {
 		// crear peixos
 		for (int i = 0; i < N_Peixos; i++) {
 			boolean sexe = (nPeixos % 2 == 0);
-			Animal p = new Peix(1000, 600, sexe);
+			Animal p = new Peix(1350, 650, sexe);
 			animals.add(p);
 			nPeixos++;
 		}
 		for (int i = 0; i < N_Taurons; i++) {
 			boolean sexe = (nTaurons % 2 == 0);
-			Tauro t = new Tauro(1000, 600, sexe);
+			Tauro t = new Tauro(1350, 650, sexe);
 			animals.add(t);
 			nTaurons++;
 		}
 		for (int i = 0; i < N_Tortugues; i++) {
 			boolean sexe = (nTortugues % 2 == 0);
-			Tortuga t = new Tortuga(1000, 600, sexe);
+			Tortuga t = new Tortuga(1350, 650, sexe);
 			animals.add(t);
 			nTortugues++;
 		}
 		for (int i = 0; i < N_Dofins; i++) {
 			boolean sexe = (nDofins% 2 == 0);
-			Dofi t = new Dofi(1000, 600, sexe);
+			Dofi t = new Dofi(1350, 650, sexe);
 			animals.add(t);
 			nDofins++;
 		}
 		for (int i = 0; i < N_Crancs; i++) {
-			Cranc t = new Cranc(1000, 600, true);
+			Cranc t = new Cranc(1350, 650, true);
 			animals.add(t);
 		}
 		for (int i = 0; i < N_Pops; i++) {
-			Pop t = new Pop(1000, 600, true);
+			Pop t = new Pop(1350, 650, true);
 			animals.add(t);
 		}
 	}
