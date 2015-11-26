@@ -98,8 +98,13 @@ public class Pop extends Animal {
 
 	@Override
 	public int xoca(Animal p) {
-		// TODO Auto-generated method stub
-		return 0;
+		int resultat = 0;
+		if (p.getClass().equals(Pop.class)) {
+			if (this.getPosicio().intersects(p.getPosicio())) {
+				resultat = 1;
+			}
+		}
+		return resultat;
 	}
 
 }
